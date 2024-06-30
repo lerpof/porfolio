@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: 3.22.0
+          cache: true
+          
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Code generation
+        run: |
+          dart run build_runner build -d
+          dart run easy_localization:generate -S assets/translations -f json -O lib/src/localization/generated -o locale_json.g.dart
+          dart run easy_localization:generate -S assets/translations -f keys -O lib/src/localization/generated -o locale_keys.g.dart
+
+      - name: Set base-href
+        id: set_base_href
+        run: |
+          if [[ -z "${{ vars.CNAME }}" ]]; then
+            echo "::set-output name=base_href::/${{ github.event.repository.name }}/"
+          else
+            echo "::set-output name=base_href::/"
+          fi
+
+      - name: Build
+        run: flutter build web --web-renderer canvaskit --release --no-tree-shake-icons --base-href "${{ steps.set_base_href.outputs.base_href }}"
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          cname: ${{ vars.CNAME }}

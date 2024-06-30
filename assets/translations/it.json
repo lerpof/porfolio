@@ -1,0 +1,196 @@
+{
+    "name": "Leonardo Lazzari",
+    "description": "Sviluppatore di Mobile App",
+    "subDescription": "Appassionato di Flutter e SwiftUI",
+    "contacts": [
+        {
+            "tooltip": "Github",
+            "url": "https://github.com/lerpof",
+            "icon": {
+                "codePoint": "0xefb7",
+                "fontFamily": "FontAwesome"
+            }
+        },
+        {
+            "tooltip": "LinkedIn",
+            "url": "https://www.linkedin.com/in/leonardo-lazzari-59855b268/",
+            "icon": {
+                "codePoint": "0xeffb",
+                "fontFamily": "FontAwesome"
+            }
+        },
+        {
+            "tooltip": "il.leonardo.lazzari@gmail.com",
+            "url": "mailto:il.leonardo.lazzari@gmail.com",
+            "icon": {
+                "codePoint": "0xeaad",
+                "fontFamily": "FontAwesome"
+            }
+        },
+        {
+            "tooltip": "+39 339 797 9754",
+            "url": "tel:+393397979754",
+            "icon": {
+                "codePoint": "0xecbb",
+                "fontFamily": "FontAwesome"
+            }
+        }
+    ],
+    "resumes": [
+        {
+            "languageCode": "en",
+            "url": "https://drive.google.com/file/d/1_I-4YxnvL0kLgWF3c_C4qNUZtUuzkPV2/view?usp=drive_link"
+        }
+    ],
+    "aboutDescription": "Ciao! Sono Leonardo, uno sviluppatore di Mobile App. Sono laureato in Informatica e ho una forte passione per la programmazione e la tecnologia. Sono specializzato nello sviluppo di applicazioni iOS con SwiftUI e UIKit e anche applicazioni cross platform con Flutter.\nSono sempre alla ricerca di nuove sfide e opportunità per crescere professionalmente. Non esitare a contattarmi!",
+    "experiences": [
+        {
+            "role": "Sviluppatore di Mobile App",
+            "company": "CGM Consulting",
+            "description": "Sviluppo di applicazioni mobili nell'ambito delle telecomunicazioni, in particolare per la gestione di reti casalinghe interfacciandosi con i router e i vari dispositivi di rete.\nSviluppo di applicazioni Android, iOS e Web con l'utilizzo di Flutter.",
+            "isPresent": true,
+            "startMonth": 3,
+            "startYear": 2022,
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/flutter.svg"
+                    }
+                },
+                {
+                    "name": "Dart",
+                    "icon": {
+                        "assetName": "assets/icons/other/dart.svg"
+                    }
+                },
+                {
+                    "name": "Swift, SwiftUI and UIKit",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/swift.svg"
+                    }
+                },
+                {
+                    "name": "Realm",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/realm.svg"
+                    }
+                },
+                {
+                    "name": "Firebase",
+                    "icon": {
+                        "assetName": "assets/icons/other/firebase.svg"
+                    }
+                }
+            ]
+        },
+        {
+            "role": "iOS App Developer (stage)",
+            "company": "N3 Hack For Business",
+            "description": "Sviluppo di un porting di un'applicazione Android in iOS con l'utilizzo di UIKit.",
+            "isPresent": false,
+            "startMonth": 10,
+            "startYear": 2021,
+            "endMonth": 2,
+            "endYear": 2022,
+            "technologies": [
+                {
+                    "name": "Swift and UIKit",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/swift.svg"
+                    }
+                },
+                {
+                    "name": "Realm",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/realm.svg"
+                    }
+                }
+            ]
+        }
+    ],
+    "present": "Presente",
+    "projects": [
+        {
+            "name": "Portfolio",
+            "description": "Portfolio è un'applicazione mobile sviluppata con Flutter che consente di visualizzare il mio portfolio e i miei progetti.",
+            "url": "https://github.com/AladdineDev/portfolio#readme",
+            "icon": {
+                "codePoint": "0xefb7",
+                "fontFamily": "FontAwesome",
+                "color": "0xffffffff"
+            },
+            "screenshotPath": "assets/images/portfolio.png",
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/flutter.svg"
+                    }
+                },
+                {
+                    "name": "Dart",
+                    "icon": {
+                        "assetName": "assets/icons/other/dart.svg"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Easy Gym - Workout Tracker",
+            "description": "Easy Gym - Workout Tracker, è un progetto personale che ho sviluppato per iOS 17+ con SwiftUI e le ultime tecnologie di Apple. L'applicazione consente di tenere traccia dei propri allenamenti, creare nuovi esercizi e programmi di allenamento personalizzati potendo accedere ad un database di oltre 1300 esercizi.",
+            "url": "https://apps.apple.com/it/app/easy-gym-workout-tracker/id6479514730?l=en-GB",
+            "icon": {
+                "codePoint": "0xefb7",
+                "fontFamily": "FontAwesome",
+                "color": "0xffffffff"
+            },
+            "screenshotPath": "assets/images/easygym.png",
+            "technologies": [
+                {
+                    "name": "Swift and SwiftUI",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/swift.svg"
+                    }
+                },
+                {
+                    "name": "Swift Data",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/swiftdata.svg"
+                    }
+                }
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "code": "en",
+            "name": "Inglese",
+            "nativeName": "English",
+            "icon": {
+                "assetName": "assets/icons/flags/united-states-of-america.svg"
+            }
+        },
+        {
+            "code": "it",
+            "name": "Italiano",
+            "nativeName": "Italiano",
+            "icon": {
+                "assetName": "assets/icons/flags/italy.svg"
+            }
+        }
+    ],
+    "bottomBanner": {
+        "message": "Lazzari Leonardo - Sviluppatore di Mobile App"
+    },
+    "portfolio": "Portfolio",
+    "homeSectionTitle": "Home",
+    "aboutSectionTitle": "Informazioni",
+    "aboutSectionTitleAlt": "Su di me",
+    "experienceSectionTitle": "Esperienza",
+    "projectsSectionTitle": "Progetti",
+    "resume": "Curriculum",
+    "downloadResume": "Scarica curriculum",
+    "openUrlError": "Impossibile aprire l'URL",
+    "unknownLanguageError": "Lingua sconosciuta"
+}
