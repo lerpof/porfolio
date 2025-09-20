@@ -45,12 +45,54 @@
     "aboutDescription": "Ciao! Sono Leonardo, uno sviluppatore di Mobile App. Sono laureato in Informatica e ho una forte passione per la programmazione e la tecnologia. Sono specializzato nello sviluppo di applicazioni iOS con SwiftUI e UIKit e anche applicazioni cross platform con Flutter.\nSono sempre alla ricerca di nuove sfide e opportunità per crescere professionalmente. Non esitare a contattarmi!",
     "experiences": [
         {
+            "role": "Flutter, iOS and Android Developer",
+            "company": "Capgemini",
+            "description": "Sviluppo di applicazioni mobili per il settore bancario, adottando Clean Architecture e principi SOLID per garantire scalabilità e manutenibilità del codice. Utilizzo Bloc per la gestione dello stato, GetIt per l'iniezione delle dipendenze e GoRouter per la navigazione avanzata. Integro viste native all'interno dell'app Flutter e gestisco le chiamate API tramite DIO, assicurando performance e sicurezza nell'accesso ai dati.",
+            "isPresent": true,
+            "startMonth": 11,
+            "startYear": 2024,
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/flutter.svg"
+                    }
+                },
+                {
+                    "name": "Dart",
+                    "icon": {
+                        "assetName": "assets/icons/other/dart.svg"
+                    }
+                },
+                {
+                    "name": "Swift, SwiftUI and UIKit",
+                    "icon": {
+                        "assetName": "assets/icons/software-development/swift.svg"
+                    }
+                },
+                {
+                    "name": "Kotlin",
+                    "icon": {
+                        "assetName": "assets/icons/other/kotlin.svg"
+                    }
+                },
+                {
+                    "name": "Firebase",
+                    "icon": {
+                        "assetName": "assets/icons/other/firebase.svg"
+                    }
+                }
+            ]
+        },
+        {
             "role": "Sviluppatore di Mobile App",
             "company": "CGM Consulting",
-            "description": "Sviluppo di applicazioni mobili nell'ambito delle telecomunicazioni, in particolare per la gestione di reti casalinghe interfacciandosi con i router e i vari dispositivi di rete.\nSviluppo di applicazioni Android, iOS e Web con l'utilizzo di Flutter.",
-            "isPresent": true,
+            "description": "Sviluppo di applicazioni mobili nell'ambito delle telecomunicazioni, in particolare per la gestione di reti casalinghe interfacciandosi con router e dispositivi di rete. Realizzo applicazioni Android e iOS utilizzando Flutter e adottando Clean Architecture per garantire scalabilità e manutenibilità del codice.",
+            "isPresent": false,
             "startMonth": 3,
             "startYear": 2022,
+            "endMonth": 11,
+            "endYear": 2024,
             "technologies": [
                 {
                     "name": "Flutter",

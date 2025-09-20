@@ -3,13 +3,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/constants/transparent_image.dart';
 import 'package:portfolio/src/features/project/domain/project.dart';
 import 'package:portfolio/src/common/widgets/icon.dart';
+import 'package:vector_math/vector_math_64.dart' hide Colors;
 
 class ProjectImage extends ConsumerWidget {
-  const ProjectImage({
-    super.key,
-    required this.project,
-    required this.isHovered,
-  });
+  const ProjectImage({super.key, required this.project, required this.isHovered});
 
   final Project project;
   final bool isHovered;
@@ -21,18 +18,10 @@ class ProjectImage extends ConsumerWidget {
     return Stack(
       children: [
         Container(
-          constraints: const BoxConstraints(
-            minHeight: 200,
-            minWidth: 520,
-            maxHeight: 400,
-            maxWidth: 600,
-          ),
+          constraints: const BoxConstraints(minHeight: 200, minWidth: 520, maxHeight: 400, maxWidth: 600),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(
-              width: 4,
-              color: Theme.of(context).colorScheme.tertiary.withAlpha(100),
-            ),
+            border: Border.all(width: 4, color: Theme.of(context).colorScheme.tertiary.withAlpha(100)),
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(8),
@@ -45,21 +34,16 @@ class ProjectImage extends ConsumerWidget {
                       tileMode: TileMode.decal,
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.transparent,
-                        isHovered ? Colors.black12 : Colors.transparent,
-                        isHovered ? Colors.black26 : Colors.transparent,
-                        isHovered ? Colors.black54 : Colors.transparent,
-                      ],
+                      colors: [Colors.transparent, isHovered ? Colors.black12 : Colors.transparent, isHovered ? Colors.black26 : Colors.transparent, isHovered ? Colors.black54 : Colors.transparent],
                     ),
                   ),
                   duration: const Duration(seconds: 1),
                   curve: Curves.decelerate,
                   transform: isHovered
                       ? (Matrix4.identity()
-                        ..translate(0.5 * width, 0.5 * width)
-                        ..scale(1.2)
-                        ..translate(0.5 * -width, 0.5 * -width))
+                          ..translateByVector3(Vector3(0.5 * width, 0.5 * width, 0))
+                          ..scaleByVector3(Vector3(1.2, 1.2, 1.2))
+                          ..translateByVector3(Vector3(0.5 * -width, 0.5 * -width, 0)))
                       : Matrix4.identity(),
                   child: _buildScreenshotImage(context),
                 );
@@ -77,16 +61,11 @@ class ProjectImage extends ConsumerWidget {
               firstCurve: Curves.decelerate,
               secondCurve: Curves.decelerate,
               sizeCurve: Curves.decelerate,
-              crossFadeState: isHovered
-                  ? CrossFadeState.showSecond
-                  : CrossFadeState.showFirst,
+              crossFadeState: isHovered ? CrossFadeState.showSecond : CrossFadeState.showFirst,
               duration: const Duration(seconds: 1),
               reverseDuration: const Duration(milliseconds: 500),
               firstChild: const SizedBox.shrink(),
-              secondChild: MyIcon(
-                icon: project.icon,
-                size: _iconSize,
-              ),
+              secondChild: MyIcon(icon: project.icon, size: _iconSize),
             ),
           ),
         ),
@@ -97,12 +76,6 @@ class ProjectImage extends ConsumerWidget {
   Widget _buildScreenshotImage(BuildContext context) {
     final screenshotPath = project.screenshotPath;
     if (screenshotPath == null) return const Icon(Icons.code);
-    return FadeInImage(
-      placeholder: MemoryImage(transparentImage),
-      image: AssetImage(screenshotPath),
-      imageErrorBuilder: (_, __, ___) => const Placeholder(),
-      fit: BoxFit.cover,
-      placeholderFit: BoxFit.cover,
-    );
+    return FadeInImage(placeholder: MemoryImage(transparentImage), image: AssetImage(screenshotPath), imageErrorBuilder: (_, __, ___) => const Placeholder(), fit: BoxFit.cover, placeholderFit: BoxFit.cover);
   }
 }

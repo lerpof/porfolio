@@ -1,8 +1,9 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:portfolio/src/localization/translation_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/features/experience/domain/experience.dart';
-import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
+import 'package:portfolio/src/localization/translation_keys.dart';
+import 'package:portfolio/src/localization/custom_localization_service.dart';
 import 'package:portfolio/src/utils/localized_date_extension.dart';
 import 'package:portfolio/src/utils/string_extension.dart';
 
@@ -13,7 +14,7 @@ class ExperienceDateText extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final locale = context.locale;
+    final locale = ref.watch(currentLocaleProvider);
     final startMonth = experience.startMonth?.localizedMonth(locale) ?? "";
     final startYear = experience.startYear?.localizedYear(locale);
     final startDate = startMonth.isEmpty ? startYear : "$startMonth $startYear";
@@ -21,14 +22,11 @@ class ExperienceDateText extends ConsumerWidget {
     final endYear = experience.endYear?.localizedYear(locale);
     String? endDate;
     if (experience.isPresent == true) {
-      endDate = tr(LocaleKeys.present);
+      endDate = tr(ref, TranslationKeys.present);
     } else {
       endDate = endMonth.isEmpty ? endYear : "$endMonth $endYear";
     }
     if (startDate == null || endDate == null) return const Text("");
-    return Text(
-      "${startDate.capitalize()} - ${endDate.capitalize()}",
-      style: Theme.of(context).textTheme.bodyMedium,
-    );
+    return Text("${startDate.capitalize()} - ${endDate.capitalize()}", style: Theme.of(context).textTheme.bodyMedium);
   }
 }

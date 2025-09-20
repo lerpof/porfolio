@@ -1,17 +1,18 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:portfolio/src/localization/custom_localization_service.dart';
 
 class ScaffoldMessengerHelper {
   ScaffoldMessengerHelper._();
 
   static void showLaunchUrlError(BuildContext context, {String? url}) {
     if (context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text("${tr(LocaleKeys.openUrlError)} $url"),
-        ),
-      );
+      // Get the translation service from the context
+      final container = ProviderScope.containerOf(context);
+      final service = container.read(localizationServiceProvider);
+      final errorMessage = service.translate('openUrlError');
+
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("$errorMessage $url")));
     }
   }
 }

@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/common/data/language_repository.dart';
@@ -8,7 +7,8 @@ import 'package:portfolio/src/constants/sizes.dart';
 import 'package:portfolio/src/features/general/presentation/widgets/app_bar_button.dart';
 import 'package:portfolio/src/features/general/presentation/widgets/dark_mode_switch.dart';
 import 'package:portfolio/src/features/general/presentation/widgets/locale_button.dart';
-import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
+import 'package:portfolio/src/localization/translation_helpers.dart';
+import 'package:portfolio/src/localization/translation_keys.dart';
 import 'package:portfolio/src/features/general/provider/section_key_provider.dart';
 import 'package:portfolio/src/common/widgets/responsive.dart';
 
@@ -22,9 +22,7 @@ class MyAppBar extends ConsumerWidget {
         scrolledUnderElevation: 0,
         backgroundColor: Theme.of(context).colorScheme.secondary,
         centerTitle: false,
-        titleTextStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+        titleTextStyle: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
         title: MouseRegion(
           cursor: SystemMouseCursors.click,
           child: GestureDetector(
@@ -37,14 +35,9 @@ class MyAppBar extends ConsumerWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(
-                        IconData(
-                          0xedc3,
-                          fontFamily: "FontAwesome",
-                        ),
-                      ),
+                      const Icon(IconData(0xedc3, fontFamily: "FontAwesome")),
                       const SizedBox(width: 12),
-                      Text(tr(LocaleKeys.portfolio)),
+                      Text(tr(ref, TranslationKeys.portfolio)),
                     ],
                   ),
                 ),
@@ -59,21 +52,19 @@ class MyAppBar extends ConsumerWidget {
               child: Row(
                 children: [
                   AppBarButton(
-                    title: tr(LocaleKeys.aboutSectionTitle),
+                    title: tr(ref, TranslationKeys.aboutSectionTitle),
                     onPressed: () {
                       _onAppBarButtonTap(ref.watch(aboutSectionKeyProvider));
                     },
                   ),
                   AppBarButton(
-                    title: tr(LocaleKeys.experienceSectionTitle),
+                    title: tr(ref, TranslationKeys.experienceSectionTitle),
                     onPressed: () {
-                      _onAppBarButtonTap(
-                        ref.watch(experienceSectionKeyProvider),
-                      );
+                      _onAppBarButtonTap(ref.watch(experienceSectionKeyProvider));
                     },
                   ),
                   AppBarButton(
-                    title: tr(LocaleKeys.projectsSectionTitle),
+                    title: tr(ref, TranslationKeys.projectsSectionTitle),
                     onPressed: () {
                       _onAppBarButtonTap(ref.watch(projectSectionKeyProvider));
                     },
@@ -101,11 +92,7 @@ class MyAppBar extends ConsumerWidget {
   void _onAppBarButtonTap(GlobalKey sectionKey) {
     final sectionKeyCurrentContext = sectionKey.currentContext;
     if (sectionKeyCurrentContext != null) {
-      Scrollable.ensureVisible(
-        sectionKeyCurrentContext,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.decelerate,
-      );
+      Scrollable.ensureVisible(sectionKeyCurrentContext, duration: const Duration(milliseconds: 500), curve: Curves.decelerate);
     }
   }
 

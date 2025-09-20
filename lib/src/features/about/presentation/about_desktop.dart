@@ -1,7 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
+import 'package:portfolio/src/localization/translation_helpers.dart';
+import 'package:portfolio/src/localization/translation_keys.dart';
 
 class AboutDesktop extends ConsumerWidget {
   const AboutDesktop({super.key});
@@ -13,15 +13,9 @@ class AboutDesktop extends ConsumerWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 32),
-          child: Text(
-            tr(LocaleKeys.aboutSectionTitleAlt),
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
+          child: Text(tr(ref, TranslationKeys.aboutSectionTitleAlt), style: Theme.of(context).textTheme.titleLarge),
         ),
-        Text(
-          tr(LocaleKeys.aboutDescription),
-          style: Theme.of(context).textTheme.bodyLarge,
-        ),
+        Text(tr(ref, TranslationKeys.aboutDescription), style: Theme.of(context).textTheme.bodyLarge),
       ],
     );
   }

@@ -1,9 +1,16 @@
 import 'dart:ui';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:portfolio/src/localization/custom_localization_service.dart';
 
-import 'package:portfolio/src/localization/generated/locale_json.g.dart';
-
+/// Legacy function for compatibility - now uses the custom localization service
 List<Map<String, dynamic>> trList(Locale locale, String key) {
-  final mapLocales = CodegenLoader.mapLocales[locale.languageCode];
-  final mapValue = mapLocales?[key];
-  return mapValue;
+  // This function is kept for backward compatibility but should be replaced
+  // with the new trList function from translation_helpers.dart
+  // For now, it returns an empty list as it requires a WidgetRef
+  return [];
+}
+
+/// Use this function with WidgetRef instead
+List<Map<String, dynamic>> trListWithRef(WidgetRef ref, String key) {
+  return ref.watch(localizationServiceProvider).translateList(key);
 }

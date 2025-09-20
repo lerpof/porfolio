@@ -1,4 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:portfolio/src/localization/translation_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/constants/sizes.dart';
@@ -6,7 +6,7 @@ import 'package:portfolio/src/features/personal_info/data/personal_info_reposito
 import 'package:portfolio/src/features/personal_info/domain/resume.dart';
 import 'package:portfolio/src/features/personal_info/presentation/widgets/contact_bar.dart';
 import 'package:portfolio/src/features/personal_info/presentation/widgets/resume_button.dart';
-import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
+import 'package:portfolio/src/localization/translation_keys.dart';
 
 class PersonalInfoTablet extends ConsumerWidget {
   const PersonalInfoTablet({super.key});
@@ -22,30 +22,15 @@ class PersonalInfoTablet extends ConsumerWidget {
         Container(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            border: Border.all(
-              color: Theme.of(context).colorScheme.tertiary,
-              width: 2,
-            ),
+            border: Border.all(color: Theme.of(context).colorScheme.tertiary, width: 2),
           ),
-          child: const CircleAvatar(
-            radius: 100,
-            backgroundImage: AssetImage('assets/images/profile.png'),
-          ),
+          child: const CircleAvatar(radius: 100, backgroundImage: AssetImage('assets/images/profile.png')),
         ),
-        Text(
-          tr(LocaleKeys.name),
-          style: Theme.of(context).textTheme.displayLarge,
-        ),
+        Text(tr(ref, TranslationKeys.name), style: Theme.of(context).textTheme.displayLarge),
         gapH4,
-        Text(
-          tr(LocaleKeys.description),
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
+        Text(tr(ref, TranslationKeys.description), style: Theme.of(context).textTheme.titleLarge),
         gapH8,
-        Text(
-          tr(LocaleKeys.subDescription),
-          style: Theme.of(context).textTheme.bodyLarge,
-        ),
+        Text(tr(ref, TranslationKeys.subDescription), style: Theme.of(context).textTheme.bodyLarge),
         _buildResumeButton(ref, resumes: resumes.toList()),
         gapH8,
         ContactBar(contacts: contacts.toList()),

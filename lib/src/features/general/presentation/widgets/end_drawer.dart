@@ -1,4 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:portfolio/src/localization/translation_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/common/data/language_repository.dart';
@@ -11,7 +11,7 @@ import 'package:portfolio/src/features/general/presentation/widgets/locale_butto
 
 import 'package:portfolio/src/features/general/provider/section_key_provider.dart';
 import 'package:portfolio/src/common/widgets/responsive.dart';
-import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
+import 'package:portfolio/src/localization/translation_keys.dart';
 
 class EndDrawer extends ConsumerWidget {
   const EndDrawer({super.key});
@@ -27,16 +27,10 @@ class EndDrawer extends ConsumerWidget {
             alignment: Alignment.topRight,
             child: Padding(
               padding: const EdgeInsets.only(top: 8),
-              child: IconButton(
-                onPressed: () => Navigator.of(context).pop(),
-                icon: const Icon(Icons.close),
-              ),
+              child: IconButton(onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.close)),
             ),
           ),
-          Divider(
-            height: 8,
-            color: Theme.of(context).colorScheme.inversePrimary,
-          ),
+          Divider(height: 8, color: Theme.of(context).colorScheme.inversePrimary),
           Expanded(
             child: MySelectionArea(
               mouseCursor: WidgetStateMouseCursor.clickable,
@@ -47,53 +41,33 @@ class EndDrawer extends ConsumerWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       gapH40,
-                      const AnimatedFadeSlide(
-                        offset: Offset(0, -64),
-                        duration: Duration(milliseconds: 350),
-                        child: DarkModeSwitch(),
-                      ),
+                      const AnimatedFadeSlide(offset: Offset(0, -64), duration: Duration(milliseconds: 350), child: DarkModeSwitch()),
                       gapH80,
                       AnimatedFadeSlide(
                         offset: const Offset(128, 0),
                         duration: const Duration(milliseconds: 300),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.homeSectionTitle),
-                          sectionKey: ref.watch(homeSectionKeyProvider),
-                        ),
+                        child: MyDrawerButton(title: tr(ref, TranslationKeys.homeSectionTitle), sectionKey: ref.watch(homeSectionKeyProvider)),
                       ),
                       gapH40,
                       AnimatedFadeSlide(
                         offset: const Offset(112, 0),
                         duration: const Duration(milliseconds: 350),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.aboutSectionTitle),
-                          sectionKey: ref.watch(aboutSectionKeyProvider),
-                        ),
+                        child: MyDrawerButton(title: tr(ref, TranslationKeys.aboutSectionTitle), sectionKey: ref.watch(aboutSectionKeyProvider)),
                       ),
                       gapH40,
                       AnimatedFadeSlide(
                         offset: const Offset(96, 0),
                         duration: const Duration(milliseconds: 375),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.experienceSectionTitle),
-                          sectionKey: ref.watch(experienceSectionKeyProvider),
-                        ),
+                        child: MyDrawerButton(title: tr(ref, TranslationKeys.experienceSectionTitle), sectionKey: ref.watch(experienceSectionKeyProvider)),
                       ),
                       gapH40,
                       AnimatedFadeSlide(
                         offset: const Offset(80, 0),
                         duration: const Duration(milliseconds: 400),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.projectsSectionTitle),
-                          sectionKey: ref.watch(projectSectionKeyProvider),
-                        ),
+                        child: MyDrawerButton(title: tr(ref, TranslationKeys.projectsSectionTitle), sectionKey: ref.watch(projectSectionKeyProvider)),
                       ),
                       gapH80,
-                      AnimatedFadeSlide(
-                        offset: const Offset(0, 64),
-                        duration: const Duration(milliseconds: 350),
-                        child: _buildLocaleButton(context, ref),
-                      ),
+                      AnimatedFadeSlide(offset: const Offset(0, 64), duration: const Duration(milliseconds: 350), child: _buildLocaleButton(context, ref)),
                       gapH40,
                     ],
                   ),

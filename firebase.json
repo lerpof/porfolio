@@ -1,0 +1,1 @@
+{"firestore":{"database":"(default)","location":"eur3","rules":"firestore.rules","indexes":"firestore.indexes.json"},"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"flutter-portfolio-74db1","configurations":{"web":"1:84242570151:web:008c48fef5a33c45e6b482"}}}}}}
