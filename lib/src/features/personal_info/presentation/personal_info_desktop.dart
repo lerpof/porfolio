@@ -7,6 +7,7 @@ import 'package:portfolio/src/features/personal_info/domain/resume.dart';
 import 'package:portfolio/src/features/personal_info/presentation/widgets/contact_bar.dart';
 import 'package:portfolio/src/features/personal_info/presentation/widgets/resume_button.dart';
 import 'package:portfolio/src/localization/translation_keys.dart';
+import 'package:portfolio/src/remote_assets.dart';
 
 class PersonalInfoDesktop extends ConsumerWidget {
   const PersonalInfoDesktop({super.key});
@@ -17,6 +18,7 @@ class PersonalInfoDesktop extends ConsumerWidget {
     final contacts = ref.watch(personalInfoRepositoryProvider).getContacts();
 
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
@@ -24,7 +26,7 @@ class PersonalInfoDesktop extends ConsumerWidget {
             shape: BoxShape.circle,
             border: Border.all(color: Theme.of(context).colorScheme.tertiary, width: 2),
           ),
-          child: const CircleAvatar(radius: 100, backgroundImage: AssetImage('assets/images/profile.png')),
+          child: const RemoteCircleAvatar(assetPath: 'assets/images/profile.png', radius: 100),
         ),
         Text(tr(ref, TranslationKeys.name), style: Theme.of(context).textTheme.displayLarge),
         gapH4,
@@ -32,8 +34,7 @@ class PersonalInfoDesktop extends ConsumerWidget {
         gapH8,
         Text(tr(ref, TranslationKeys.subDescription), style: Theme.of(context).textTheme.bodyLarge),
         _buildResumeButton(ref, resumes: resumes.toList()),
-        const Spacer(),
-        gapH8,
+        gapH40,
         ContactBar(contacts: contacts.toList()),
       ],
     );

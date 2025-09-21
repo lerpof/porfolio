@@ -1,5 +1,9 @@
+import 'dart:convert';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/firebase_options.dart';
@@ -53,4 +57,21 @@ void main() async {
       ),
     ),
   );
+}
+
+Future<void> saveProfile() async {
+  String jsonString = await rootBundle.loadString('assets/translations/en.json');
+  Map<String, dynamic> profileData = Map<String, dynamic>.from(jsonDecode(jsonString));
+
+  await FirebaseFirestore.instance.collection('portfolio').doc('en').set(profileData);
+
+  jsonString = await rootBundle.loadString('assets/translations/it.json');
+  profileData = Map<String, dynamic>.from(jsonDecode(jsonString));
+
+  await FirebaseFirestore.instance.collection('portfolio').doc('it').set(profileData);
+
+  jsonString = await rootBundle.loadString('assets/translations/fr.json');
+  profileData = Map<String, dynamic>.from(jsonDecode(jsonString));
+
+  await FirebaseFirestore.instance.collection('portfolio').doc('fr').set(profileData);
 }

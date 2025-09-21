@@ -45,7 +45,7 @@ class _ResumeButtonState extends ConsumerState<ResumeButton> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               textBaseline: TextBaseline.alphabetic,
               children: [
                 Icon(const IconData(0xeec7, fontFamily: "FontAwesome"), color: theme.colorScheme.inverseSurface),

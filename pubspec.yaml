@@ -28,6 +28,7 @@ dependencies:
   path: ^1.9.0
   cloud_firestore: ^6.0.1
   firebase_core: ^4.1.0
+  cached_network_image: ^3.4.1
   vector_math: ^2.1.4
 
 dev_dependencies:
@@ -49,9 +50,7 @@ flutter:
 
   assets:
     - assets/fonts/
-    - assets/icons/flags/
-    - assets/icons/other/
-    - assets/icons/software-development/
+    - assets/icons/
     - assets/images/
     - assets/translations/
 

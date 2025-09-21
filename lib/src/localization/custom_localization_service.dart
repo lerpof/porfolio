@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'dart:convert';
 
 class CustomLocalizationService extends ChangeNotifier {
-  static const List<Locale> supportedLocales = [Locale('en'), Locale('it')];
+  static const List<Locale> supportedLocales = [Locale('en'), Locale('it'), Locale('fr')];
 
   Locale _currentLocale = const Locale('en');
   final Map<String, Map<String, dynamic>> _translations = {};

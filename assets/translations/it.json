@@ -42,12 +42,12 @@
             "url": "https://drive.google.com/file/d/1_I-4YxnvL0kLgWF3c_C4qNUZtUuzkPV2/view?usp=drive_link"
         }
     ],
-    "aboutDescription": "Ciao! Sono Leonardo, uno sviluppatore di Mobile App. Sono laureato in Informatica e ho una forte passione per la programmazione e la tecnologia. Sono specializzato nello sviluppo di applicazioni iOS con SwiftUI e UIKit e anche applicazioni cross platform con Flutter.\nSono sempre alla ricerca di nuove sfide e opportunità per crescere professionalmente. Non esitare a contattarmi!",
+    "aboutDescription": "Ciao! Sono Leonardo, uno sviluppatore di applicazioni mobili specializzato in Flutter e iOS. Mi sono laureato in Informatica e ho una profonda passione per la programmazione e l'innovazione tecnologica. La mia expertise si concentra sullo sviluppo di applicazioni iOS native con SwiftUI e UIKit, oltre a soluzioni cross-platform con Flutter.\n\nUtilizzo architetture pulite e principi SOLID per creare codice scalabile e manutenibile. La mia esperienza include l'integrazione di API RESTful, la gestione di database locali e cloud, e l'implementazione di interfacce utente moderne e intuitive.\n\nSono sempre alla ricerca di nuove sfide tecniche e opportunità per crescere professionalmente in un ambiente dinamico e innovativo. Non esitare a contattarmi per discutere progetti interessanti!",
     "experiences": [
         {
-            "role": "Flutter, iOS and Android Developer",
+            "role": "Flutter, iOS e Android Developer",
             "company": "Capgemini",
-            "description": "Sviluppo di applicazioni mobili per il settore bancario, adottando Clean Architecture e principi SOLID per garantire scalabilità e manutenibilità del codice. Utilizzo Bloc per la gestione dello stato, GetIt per l'iniezione delle dipendenze e GoRouter per la navigazione avanzata. Integro viste native all'interno dell'app Flutter e gestisco le chiamate API tramite DIO, assicurando performance e sicurezza nell'accesso ai dati.",
+            "description": "Sviluppo di applicazioni mobili avanzate per il settore bancario e finanziario, implementando Clean Architecture e principi SOLID per garantire scalabilità, manutenibilità e testabilità del codice.\n\nUtilizzo tecnologie all'avanguardia come Bloc per la gestione dello stato reattivo, GetIt per l'iniezione delle dipendenze, e GoRouter per la navigazione dichiarativa. Integro componenti nativi iOS e Android all'interno dell'ecosistema Flutter e gestisco comunicazioni API sicure tramite DIO e Retrofit.\n\nCollaboro in team agili utilizzando metodologie DevOps, con particolare attenzione alla qualità del codice attraverso test unitari, integrativi e code review sistematiche.",
             "isPresent": true,
             "startMonth": 11,
             "startYear": 2024,
@@ -55,39 +55,39 @@
                 {
                     "name": "Flutter",
                     "icon": {
-                        "assetName": "assets/icons/software-development/flutter.svg"
+                        "assetName": "assets/icons/flutter.svg"
                     }
                 },
                 {
                     "name": "Dart",
                     "icon": {
-                        "assetName": "assets/icons/other/dart.svg"
+                        "assetName": "assets/icons/dart.svg"
                     }
                 },
                 {
                     "name": "Swift, SwiftUI and UIKit",
                     "icon": {
-                        "assetName": "assets/icons/software-development/swift.svg"
+                        "assetName": "assets/icons/swift.svg"
                     }
                 },
                 {
                     "name": "Kotlin",
                     "icon": {
-                        "assetName": "assets/icons/other/kotlin.svg"
+                        "assetName": "assets/icons/kotlin.svg"
                     }
                 },
                 {
                     "name": "Firebase",
                     "icon": {
-                        "assetName": "assets/icons/other/firebase.svg"
+                        "assetName": "assets/icons/firebase.svg"
                     }
                 }
             ]
         },
         {
-            "role": "Sviluppatore di Mobile App",
+            "role": "Sviluppatore di Applicazioni Mobili",
             "company": "CGM Consulting",
-            "description": "Sviluppo di applicazioni mobili nell'ambito delle telecomunicazioni, in particolare per la gestione di reti casalinghe interfacciandosi con router e dispositivi di rete. Realizzo applicazioni Android e iOS utilizzando Flutter e adottando Clean Architecture per garantire scalabilità e manutenibilità del codice.",
+            "description": "Sviluppo di soluzioni mobili innovative nel settore delle telecomunicazioni, specializzandomi nella gestione intelligente di reti domestiche attraverso l'interfacciamento con router, gateway e dispositivi IoT.\n\nRealizzo applicazioni multi-piattaforma (Android, iOS, Web) utilizzando Flutter con un approccio architetturale basato su Clean Architecture. Implemento pattern avanzati per la gestione dello stato, integrazione di API RESTful, e sincronizzazione dati real-time.\n\nLa mia esperienza include l'ottimizzazione delle performance, l'implementazione di protocolli di sicurezza per reti domestiche, e lo sviluppo di interfacce utente intuitive per la configurazione e monitoraggio di dispositivi di rete.",
             "isPresent": false,
             "startMonth": 3,
             "startYear": 2022,
@@ -97,39 +97,39 @@
                 {
                     "name": "Flutter",
                     "icon": {
-                        "assetName": "assets/icons/software-development/flutter.svg"
+                        "assetName": "assets/icons/flutter.svg"
                     }
                 },
                 {
                     "name": "Dart",
                     "icon": {
-                        "assetName": "assets/icons/other/dart.svg"
+                        "assetName": "assets/icons/dart.svg"
                     }
                 },
                 {
                     "name": "Swift, SwiftUI and UIKit",
                     "icon": {
-                        "assetName": "assets/icons/software-development/swift.svg"
+                        "assetName": "assets/icons/swift.svg"
                     }
                 },
                 {
                     "name": "Realm",
                     "icon": {
-                        "assetName": "assets/icons/software-development/realm.svg"
+                        "assetName": "assets/icons/realm.svg"
                     }
                 },
                 {
                     "name": "Firebase",
                     "icon": {
-                        "assetName": "assets/icons/other/firebase.svg"
+                        "assetName": "assets/icons/firebase.svg"
                     }
                 }
             ]
         },
         {
-            "role": "iOS App Developer (stage)",
+            "role": "iOS App Developer (Stage)",
             "company": "N3 Hack For Business",
-            "description": "Sviluppo di un porting di un'applicazione Android in iOS con l'utilizzo di UIKit.",
+            "description": "Sviluppo di un porting completo di un'applicazione Android esistente per la piattaforma iOS, utilizzando UIKit e le best practice del development nativo Apple.\n\nIl progetto ha incluso l'analisi dell'architettura Android originale, la progettazione di una soluzione iOS equivalente, e l'implementazione di funzionalità native ottimizzate per l'ecosistema Apple. Ho acquisito esperienza nell'integrazione di database locali con Realm e nell'ottimizzazione delle performance per dispositivi iOS.",
             "isPresent": false,
             "startMonth": 10,
             "startYear": 2021,
@@ -139,13 +139,13 @@
                 {
                     "name": "Swift and UIKit",
                     "icon": {
-                        "assetName": "assets/icons/software-development/swift.svg"
+                        "assetName": "assets/icons/swift.svg"
                     }
                 },
                 {
                     "name": "Realm",
                     "icon": {
-                        "assetName": "assets/icons/software-development/realm.svg"
+                        "assetName": "assets/icons/realm.svg"
                     }
                 }
             ]
@@ -156,7 +156,7 @@
         {
             "name": "Portfolio",
             "description": "Portfolio è un'applicazione mobile sviluppata con Flutter che consente di visualizzare il mio portfolio e i miei progetti.",
-            "url": "https://github.com/AladdineDev/portfolio#readme",
+            "url": "https://github.com/lerpof/portfolio",
             "icon": {
                 "codePoint": "0xefb7",
                 "fontFamily": "FontAwesome",
@@ -167,13 +167,13 @@
                 {
                     "name": "Flutter",
                     "icon": {
-                        "assetName": "assets/icons/software-development/flutter.svg"
+                        "assetName": "assets/icons/flutter.svg"
                     }
                 },
                 {
                     "name": "Dart",
                     "icon": {
-                        "assetName": "assets/icons/other/dart.svg"
+                        "assetName": "assets/icons/dart.svg"
                     }
                 }
             ]
@@ -192,13 +192,13 @@
                 {
                     "name": "Swift and SwiftUI",
                     "icon": {
-                        "assetName": "assets/icons/software-development/swift.svg"
+                        "assetName": "assets/icons/swift.svg"
                     }
                 },
                 {
-                    "name": "Swift Data",
+                    "name": "SwiftData",
                     "icon": {
-                        "assetName": "assets/icons/software-development/swiftdata.svg"
+                        "assetName": "assets/icons/swiftdata.svg"
                     }
                 }
             ]
@@ -210,7 +210,7 @@
             "name": "Inglese",
             "nativeName": "English",
             "icon": {
-                "assetName": "assets/icons/flags/united-states-of-america.svg"
+                "assetName": "assets/icons/united-states-of-america.svg"
             }
         },
         {
@@ -218,12 +218,20 @@
             "name": "Italiano",
             "nativeName": "Italiano",
             "icon": {
-                "assetName": "assets/icons/flags/italy.svg"
+                "assetName": "assets/icons/italy.svg"
+            }
+        },
+        {
+            "code": "fr",
+            "name": "Francese",
+            "nativeName": "Français",
+            "icon": {
+                "assetName": "assets/icons/france.svg"
             }
         }
     ],
     "bottomBanner": {
-        "message": "Lazzari Leonardo - Sviluppatore di Mobile App"
+        "message": "Creato con ❤️ da Leonardo Lazzari con Flutter"
     },
     "portfolio": "Portfolio",
     "homeSectionTitle": "Home",

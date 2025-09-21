@@ -25,36 +25,26 @@ class GeneralDesktop extends ConsumerWidget {
           // This stack avoid pixel issue where a line is drawn between the two expanded
           child: Stack(
             children: [
-              Container(
-                color: Theme.of(context).colorScheme.primary,
-              ),
+              Container(color: Theme.of(context).colorScheme.primary),
               Row(
                 children: [
                   Expanded(
                     child: Listener(
                       onPointerSignal: (PointerSignalEvent event) {
                         if (event is PointerScrollEvent) {
-                          scrollController.position.moveTo(
-                            scrollController.position.pixels +
-                                event.scrollDelta.dy,
-                          );
+                          scrollController.position.moveTo(scrollController.position.pixels + event.scrollDelta.dy);
                         }
                       },
                       onPointerPanZoomUpdate: (event) {
-                        scrollController.position.moveTo(
-                          scrollController.position.pixels + event.panDelta.dy,
-                        );
+                        scrollController.position.moveTo(scrollController.position.pixels + event.panDelta.dy);
                       },
                       child: MySelectionArea(
                         child: Container(
-                          padding: const EdgeInsets.fromLTRB(100, 80, 100, 100),
+                          padding: EdgeInsets.fromLTRB(MediaQuery.sizeOf(context).width * 0.08, 80, MediaQuery.sizeOf(context).width * 0.08, 100),
                           color: Theme.of(context).colorScheme.primary,
                           child: const Align(
                             alignment: Alignment.topRight,
-                            child: AnimatedFadeSlide(
-                              offset: Offset(-128, 0),
-                              child: PersonalInfoSection(),
-                            ),
+                            child: AnimatedFadeSlide(offset: Offset(-128, 0), child: PersonalInfoSection()),
                           ),
                         ),
                       ),
@@ -66,36 +56,23 @@ class GeneralDesktop extends ConsumerWidget {
                         color: Theme.of(context).colorScheme.primary,
                         child: SingleChildScrollView(
                           controller: scrollController,
-                          padding: const EdgeInsetsDirectional.only(
-                            top: 80,
-                            end: 140,
-                            bottom: 88,
-                          ),
+                          padding: EdgeInsetsDirectional.only(top: 80, end: MediaQuery.sizeOf(context).width * 0.1, bottom: 88),
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: SizedBox(
-                              width: 520,
+                              width: MediaQuery.sizeOf(context).width > 1200 ? 520 : MediaQuery.sizeOf(context).width * 0.4,
                               child: AnimatedFadeSlide(
                                 offset: const Offset(128, 0),
                                 child: Column(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                      ),
-                                      child: AboutSection(
-                                        key: ref.watch(aboutSectionKeyProvider),
-                                      ),
+                                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                                      child: AboutSection(key: ref.watch(aboutSectionKeyProvider)),
                                     ),
                                     const SizedBox(height: 120),
-                                    ExperienceSection(
-                                      key: ref
-                                          .watch(experienceSectionKeyProvider),
-                                    ),
+                                    ExperienceSection(key: ref.watch(experienceSectionKeyProvider)),
                                     const SizedBox(height: 120),
-                                    ProjectSection(
-                                      key: ref.watch(projectSectionKeyProvider),
-                                    ),
+                                    ProjectSection(key: ref.watch(projectSectionKeyProvider)),
                                   ],
                                 ),
                               ),

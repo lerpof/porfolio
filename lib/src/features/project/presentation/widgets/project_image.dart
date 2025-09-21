@@ -3,6 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/constants/transparent_image.dart';
 import 'package:portfolio/src/features/project/domain/project.dart';
 import 'package:portfolio/src/common/widgets/icon.dart';
+import 'package:portfolio/src/remote_assets.dart';
 import 'package:vector_math/vector_math_64.dart' hide Colors;
 
 class ProjectImage extends ConsumerWidget {
@@ -15,10 +16,14 @@ class ProjectImage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final minWidth = screenWidth < 640 ? screenWidth * 0.9 : (screenWidth < 1024 ? 400.0 : 520.0);
+    final maxWidth = screenWidth < 640 ? screenWidth * 0.95 : (screenWidth < 1024 ? 500.0 : 600.0);
+
     return Stack(
       children: [
         Container(
-          constraints: const BoxConstraints(minHeight: 200, minWidth: 520, maxHeight: 400, maxWidth: 600),
+          constraints: BoxConstraints(minHeight: 200, minWidth: minWidth, maxHeight: 400, maxWidth: maxWidth),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             border: Border.all(width: 4, color: Theme.of(context).colorScheme.tertiary.withAlpha(100)),
@@ -76,6 +81,12 @@ class ProjectImage extends ConsumerWidget {
   Widget _buildScreenshotImage(BuildContext context) {
     final screenshotPath = project.screenshotPath;
     if (screenshotPath == null) return const Icon(Icons.code);
-    return FadeInImage(placeholder: MemoryImage(transparentImage), image: AssetImage(screenshotPath), imageErrorBuilder: (_, __, ___) => const Placeholder(), fit: BoxFit.cover, placeholderFit: BoxFit.cover);
+
+    return RemoteProjectImage(
+      assetPath: screenshotPath,
+      fit: BoxFit.cover,
+      placeholder: FadeInImage(placeholder: MemoryImage(transparentImage), image: MemoryImage(transparentImage), fit: BoxFit.cover),
+      errorWidget: const Placeholder(),
+    );
   }
 }

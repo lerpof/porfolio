@@ -1,7 +1,7 @@
 {
     "name": "Leonardo Lazzari",
-    "description": "Mobile App Developer",
-    "subDescription": "Passionate about Flutter and SwiftUI",
+    "description": "Développeur d'Applications Mobiles",
+    "subDescription": "Passionné par Flutter et SwiftUI",
     "contacts": [
         {
             "tooltip": "Github",
@@ -38,16 +38,16 @@
     ],
     "resumes": [
         {
-            "languageCode": "en",
+            "languageCode": "fr",
             "url": "https://drive.google.com/file/d/1_I-4YxnvL0kLgWF3c_C4qNUZtUuzkPV2/view?usp=drive_link"
         }
     ],
-    "aboutDescription": "Hi! I'm Leonardo, a mobile application developer specializing in Flutter and iOS development. I graduated in Computer Science and have a deep passion for programming and technological innovation. My expertise focuses on developing native iOS applications with SwiftUI and UIKit, as well as cross-platform solutions with Flutter.\n\nI utilize clean architectures and SOLID principles to create scalable and maintainable code. My experience includes RESTful API integration, local and cloud database management, and implementation of modern, intuitive user interfaces.\n\nI am always seeking new technical challenges and opportunities to grow professionally in a dynamic and innovative environment. Feel free to contact me to discuss exciting projects!",
+    "aboutDescription": "Salut ! Je suis Leonardo, développeur d'applications mobiles spécialisé en Flutter et développement iOS. Diplômé en Informatique, j'ai une passion profonde pour la programmation et l'innovation technologique. Mon expertise se concentre sur le développement d'applications iOS natives avec SwiftUI et UIKit, ainsi que des solutions cross-platform avec Flutter.\n\nJ'utilise des architectures propres et les principes SOLID pour créer du code évolutif et maintenable. Mon expérience inclut l'intégration d'APIs RESTful, la gestion de bases de données locales et cloud, et l'implémentation d'interfaces utilisateur modernes et intuitives.\n\nJe suis toujours à la recherche de nouveaux défis techniques et d'opportunités pour évoluer professionnellement dans un environnement dynamique et innovant. N'hésitez pas à me contacter pour discuter de projets passionnants !",
     "experiences": [
         {
-            "role": "Flutter, iOS and Android Developer",
+            "role": "Développeur Flutter, iOS et Android",
             "company": "Capgemini",
-            "description": "Development of advanced mobile applications for the banking and financial sector, implementing Clean Architecture and SOLID principles to ensure code scalability, maintainability, and testability.\n\nUtilization of cutting-edge technologies like Bloc for reactive state management, GetIt for dependency injection, and GoRouter for declarative navigation. Integration of native iOS and Android components within the Flutter ecosystem and management of secure API communications via DIO and Retrofit.\n\nCollaboration in agile teams using DevOps methodologies, with particular attention to code quality through unit tests, integration tests, and systematic code reviews.",
+            "description": "Développement d'applications mobiles avancées pour le secteur bancaire et financier, en implémentant une Clean Architecture et les principes SOLID pour garantir l'évolutivité, la maintenabilité et la testabilité du code.\n\nUtilisation de technologies de pointe comme Bloc pour la gestion d'état réactive, GetIt pour l'injection de dépendances, et GoRouter pour la navigation déclarative. Intégration de composants natifs iOS et Android dans l'écosystème Flutter et gestion de communications API sécurisées via DIO et Retrofit.\n\nCollaboration en équipes agiles utilisant des méthodologies DevOps, avec une attention particulière à la qualité du code à travers des tests unitaires, d'intégration et des revues de code systématiques.",
             "isPresent": true,
             "startMonth": 11,
             "startYear": 2024,
@@ -65,7 +65,7 @@
                     }
                 },
                 {
-                    "name": "Swift, SwiftUI and UIKit",
+                    "name": "Swift, SwiftUI et UIKit",
                     "icon": {
                         "assetName": "assets/icons/swift.svg"
                     }
@@ -85,9 +85,9 @@
             ]
         },
         {
-            "role": "Mobile App Developer",
+            "role": "Développeur d'Applications Mobiles",
             "company": "CGM Consulting",
-            "description": "Development of innovative mobile solutions in the telecommunications sector, specialized in intelligent management of home networks through interfacing with routers, gateways, and IoT devices.\n\nRealization of multi-platform applications (Android, iOS, Web) using Flutter with an architectural approach based on Clean Architecture. Implementation of advanced patterns for state management, RESTful API integration, and real-time data synchronization.\n\nMy experience includes performance optimization, implementation of security protocols for home networks, and development of intuitive user interfaces for network device configuration and monitoring.",
+            "description": "Développement de solutions mobiles innovantes dans le secteur des télécommunications, spécialisé dans la gestion intelligente de réseaux domestiques par l'interfaçage avec routeurs, passerelles et appareils IoT.\n\nRéalisation d'applications multi-plateformes (Android, iOS, Web) en utilisant Flutter avec une approche architecturale basée sur la Clean Architecture. Implémentation de patterns avancés pour la gestion d'état, l'intégration d'APIs RESTful, et la synchronisation de données en temps réel.\n\nMon expérience inclut l'optimisation des performances, l'implémentation de protocoles de sécurité pour réseaux domestiques, et le développement d'interfaces utilisateur intuitives pour la configuration et le monitoring d'appareils réseau.",
             "isPresent": false,
             "startMonth": 3,
             "startYear": 2022,
@@ -107,7 +107,7 @@
                     }
                 },
                 {
-                    "name": "Swift, SwiftUI and UIKit",
+                    "name": "Swift, SwiftUI et UIKit",
                     "icon": {
                         "assetName": "assets/icons/swift.svg"
                     }
@@ -127,9 +127,9 @@
             ]
         },
         {
-            "role": "iOS Developer (Internship)",
+            "role": "Développeur iOS (Stage)",
             "company": "N3 Hack For Business",
-            "description": "Development of a complete port of an existing Android application to the iOS platform, using UIKit and best practices of native Apple development.\n\nThe project included analysis of the original Android architecture, design of an equivalent iOS solution, and implementation of native features optimized for the Apple ecosystem. I gained experience in local database integration with Realm and performance optimization for iOS devices.",
+            "description": "Développement d'un portage complet d'une application Android existante vers la plateforme iOS, en utilisant UIKit et les meilleures pratiques du développement natif Apple.\n\nLe projet a inclus l'analyse de l'architecture Android originale, la conception d'une solution iOS équivalente, et l'implémentation de fonctionnalités natives optimisées pour l'écosystème Apple. J'ai acquis de l'expérience dans l'intégration de bases de données locales avec Realm et l'optimisation des performances pour appareils iOS.",
             "isPresent": false,
             "startMonth": 10,
             "startYear": 2021,
@@ -137,7 +137,7 @@
             "endYear": 2022,
             "technologies": [
                 {
-                    "name": "Swift and UIKit",
+                    "name": "Swift et UIKit",
                     "icon": {
                         "assetName": "assets/icons/swift.svg"
                     }
@@ -151,11 +151,11 @@
             ]
         }
     ],
-    "present": "Present",
+    "present": "Présent",
     "projects": [
         {
             "name": "Portfolio",
-            "description": "Portfolio is a mobile application developed with Flutter that allows you to view my portfolio and projects. The application features a modern and responsive interface, optimized for different screen sizes.",
+            "description": "Portfolio est une application mobile développée avec Flutter qui permet de visualiser mon portfolio et mes projets. L'application présente une interface moderne et responsive, optimisée pour différentes tailles d'écran.",
             "url": "https://github.com/lerpof/portfolio",
             "icon": {
                 "codePoint": "0xefb7",
@@ -179,8 +179,8 @@
             ]
         },
         {
-            "name": "Easy Gym - Workout Tracker",
-            "description": "Easy Gym - Workout Tracker is a personal project I developed for iOS 17+ with SwiftUI and the latest Apple technologies. The app allows you to track your workouts, create new exercises and custom training programs, and access a database of over 1300 exercises.",
+            "name": "Easy Gym - Suivi d'Entraînement",
+            "description": "Easy Gym - Suivi d'Entraînement est un projet personnel que j'ai développé pour iOS 17+ avec SwiftUI et les dernières technologies Apple. L'application permet de suivre vos entraînements, créer de nouveaux exercices et programmes d'entraînement personnalisés, et accéder à une base de données de plus de 1300 exercices.",
             "url": "https://apps.apple.com/it/app/easy-gym-workout-tracker/id6479514730?l=en-GB",
             "icon": {
                 "codePoint": "0xefb7",
@@ -190,7 +190,7 @@
             "screenshotPath": "assets/images/easygym.png",
             "technologies": [
                 {
-                    "name": "Swift and SwiftUI",
+                    "name": "Swift et SwiftUI",
                     "icon": {
                         "assetName": "assets/icons/swift.svg"
                     }
@@ -207,7 +207,7 @@
     "languages": [
         {
             "code": "en",
-            "name": "English",
+            "name": "Anglais",
             "nativeName": "English",
             "icon": {
                 "assetName": "assets/icons/united-states-of-america.svg"
@@ -215,7 +215,7 @@
         },
         {
             "code": "it",
-            "name": "Italian",
+            "name": "Italien",
             "nativeName": "Italiano",
             "icon": {
                 "assetName": "assets/icons/italy.svg"
@@ -223,7 +223,7 @@
         },
         {
             "code": "fr",
-            "name": "French",
+            "name": "Français",
             "nativeName": "Français",
             "icon": {
                 "assetName": "assets/icons/france.svg"
@@ -231,16 +231,16 @@
         }
     ],
     "bottomBanner": {
-        "message": "Made with ❤️ by Leonardo Lazzari with Flutter"
+        "message": "Développé avec ❤️ par Leonardo Lazzari avec Flutter"
     },
     "portfolio": "Portfolio",
-    "homeSectionTitle": "Home",
-    "aboutSectionTitle": "About",
-    "aboutSectionTitleAlt": "About Me",
-    "experienceSectionTitle": "Experience",
-    "projectsSectionTitle": "Projects",
-    "resume": "Resume",
-    "downloadResume": "Download Resume",
-    "openUrlError": "Unable to open URL",
-    "unknownLanguageError": "Unknown language"
+    "homeSectionTitle": "Accueil",
+    "aboutSectionTitle": "À Propos",
+    "aboutSectionTitleAlt": "À Propos de Moi",
+    "experienceSectionTitle": "Expérience",
+    "projectsSectionTitle": "Projets",
+    "resume": "CV",
+    "downloadResume": "Télécharger le CV",
+    "openUrlError": "Impossible d'ouvrir l'URL",
+    "unknownLanguageError": "Langue inconnue"
 }
