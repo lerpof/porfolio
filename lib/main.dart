@@ -36,14 +36,25 @@ void main() async {
                 return MaterialApp(
                   title: 'Portfolio',
                   home: Scaffold(
+                    backgroundColor: Colors.grey[50],
                     body: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const CircularProgressIndicator(),
-                          const SizedBox(height: 16),
-                          Text('Loading translations...', style: Theme.of(context).textTheme.bodyMedium),
-                        ],
+                      child: Card(
+                        elevation: 8,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 32),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const SizedBox(width: 60, height: 60, child: CircularProgressIndicator(strokeWidth: 6, valueColor: AlwaysStoppedAnimation<Color>(Colors.blueAccent))),
+                              const SizedBox(height: 24),
+                              Text(
+                                'Loading translations...',
+                                style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.blueGrey[700], fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ),

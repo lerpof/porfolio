@@ -18,8 +18,11 @@ class RemoteAssetConfig {
 
   /// Get the complete remote URL for an asset
   static String getRemoteUrl(String localAssetPath) {
+    // Remove 'assets/' prefix if present
     final cleanPath = localAssetPath.replaceFirst('assets/', '');
-    return '$baseUrl/$cleanPath';
+    // URL encode the path for Firebase Storage
+    final encodedPath = cleanPath.replaceAll('/', '%2F');
+    return '$baseUrl$encodedPath?alt=media';
   }
 
   /// Check if we should use remote assets

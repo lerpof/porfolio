@@ -4,18 +4,17 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/common/domain/icon.dart';
 
 class MyIcon extends ConsumerWidget {
-  const MyIcon({
-    super.key,
-    this.icon,
-    this.placeholder = const SizedBox.shrink(),
-    this.size = 24,
-    this.padding,
-  });
+  const MyIcon({super.key, this.icon, this.placeholder = const SizedBox.shrink(), this.size = 24, this.padding});
 
   final IconModel? icon;
   final double? size;
   final Widget placeholder;
   final EdgeInsetsGeometry? padding;
+
+  // Helper method to create IconData - this avoids tree shaking issues
+  IconData _createIconData(int codePoint, String fontFamily) {
+    return IconData(codePoint, fontFamily: fontFamily);
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -33,28 +32,15 @@ class MyIcon extends ConsumerWidget {
     if (iconCodePoint != null && iconFontFamily != null) {
       final iconCodePointHexa = int.tryParse(iconCodePoint);
       if (iconCodePointHexa != null) {
-        final iconData = IconData(
-          iconCodePointHexa,
-          fontFamily: iconFontFamily,
-        );
         return Padding(
           padding: const EdgeInsets.all(2),
           child: FittedBox(
-            child: Icon(
-              iconData,
-              color: color,
-              size: size,
-            ),
+            child: Icon(_createIconData(iconCodePointHexa, iconFontFamily), color: color, size: size),
           ),
         );
       }
     } else if (iconAssetName != null) {
-      return SvgPicture.asset(
-        iconAssetName,
-        width: size,
-        colorFilter:
-            color == null ? null : ColorFilter.mode(color, BlendMode.srcIn),
-      );
+      return SvgPicture.asset(iconAssetName, width: size, colorFilter: color == null ? null : ColorFilter.mode(color, BlendMode.srcIn));
     }
     return placeholder;
   }
