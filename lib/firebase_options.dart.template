@@ -42,8 +42,7 @@ class DefaultFirebaseOptions {
         );
       case TargetPlatform.linux:
         throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+          'DefaultFirebaseOptions are not supported for this platform.',
         );
       default:
         throw UnsupportedError(
@@ -53,11 +52,12 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC9dbcs1_eeR-MAb6CUeIlcyiXK_sAmm44',
-    appId: '1:84242570151:web:008c48fef5a33c45e6b482',
-    messagingSenderId: '84242570151',
-    projectId: 'flutter-portfolio-74db1',
-    authDomain: 'flutter-portfolio-74db1.firebaseapp.com',
-    storageBucket: 'flutter-portfolio-74db1.firebasestorage.app',
+    apiKey: 'YOUR_API_KEY_HERE',
+    appId: 'YOUR_APP_ID_HERE',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID_HERE',
+    projectId: 'YOUR_PROJECT_ID_HERE',
+    authDomain: 'YOUR_AUTH_DOMAIN_HERE',
+    storageBucket: 'YOUR_STORAGE_BUCKET_HERE',
   );
+
 }
